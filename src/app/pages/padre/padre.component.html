@@ -1,0 +1,30 @@
+
+
+<h1>Padre Compoment</h1>
+<hr>
+<h3>hola soy father: {{mensajeDesdeHija}}</h3>
+
+<!--Servicios-->
+<button class="btn btn-primary ml-6" 
+    (click)="messagesService()">
+    Padre Servicios
+</button>
+
+
+<!--Input-->
+<button class="btn btn-primary" 
+    (click)="cambiarMessages()">
+    Padre InputOutput
+</button>
+
+<!--Observable-->
+<button class="btn btn-primary" 
+    (click)="messagesObservable()">
+    Padre Observable
+</button>
+
+
+<app-hijo [mensajeChild]="mensageParaHija"
+ (messagesForParent)="recibiendoMessages($event)"></app-hijo>
+        <!--espropiedad hijo
+        aqui se pasa el nombre-->
